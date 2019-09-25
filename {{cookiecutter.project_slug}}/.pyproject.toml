@@ -1,0 +1,5 @@
+{% if cookiecutter.black %}
+[tool.black]
+line-length = {{cookiecutter.line_length}}
+{% endif %}
+

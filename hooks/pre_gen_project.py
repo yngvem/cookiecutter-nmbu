@@ -11,3 +11,11 @@ if not re.match(MODULE_REGEX, module_name):
 
     #Exit to cancel project
     sys.exit(1)
+
+
+if not type({{ cookiecutter.line_length }}) == int:
+    print('ERROR: The line length must be a number')
+    sys.exit(1)
+
+if not {{ cookiecutter.test }} and {{ cookiecutter.travis }}:
+    print('ERROR: Cannot use continuous integration without unit tests')

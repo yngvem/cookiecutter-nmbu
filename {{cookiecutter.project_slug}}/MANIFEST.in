@@ -6,8 +6,14 @@ include HISTORY.rst
 include LICENSE
 include README.rst
 
+{% if cookiecutter.test -%}
 recursive-include tests *
+{%- endif -%}
 recursive-exclude * __pycache__
 recursive-exclude * *.py[co]
 
+{% if cookiecutter.sphinx -%}
 recursive-include docs *.rst conf.py Makefile make.bat *.jpg *.png *.gif
+{%- endif -%}
+graft src
+
