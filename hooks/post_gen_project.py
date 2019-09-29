@@ -20,12 +20,12 @@ if __name__ == '__main__':
     if 'Not open source' == '{{ cookiecutter.open_source_license }}':
         remove_file('LICENSE')
 
-    if not {{ cookiecutter.sphinx }}:
+    if '{{ cookiecutter.sphinx }}' != "y":
         remove_tree('docs')
 
-    if not {{ cookiecutter.test }}:
+    if '{{ cookiecutter.test }}' != "y":
         remove_tree('tests')
 
-    if not {{ cookiecutter.travis }}:
+    if '{{ cookiecutter.travis }}' != "y":
         remove_file('.travis.yml')
 

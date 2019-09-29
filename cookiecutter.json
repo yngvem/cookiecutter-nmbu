@@ -10,18 +10,18 @@
   "open_source_license": ["MIT license", "BSD license", "ISC license", "Apache Software License 2.0", "GNU General Public License v3", "Not open source"],
   "create_author_file": "n",
   
-  "black": false,
-  "blacken_docs": false,
-  "flake8": false,
+  "black": "n",
+  "blacken_docs": "n",
+  "flake8": "n",
   "line_length": 88,
-  "bumpversion": false,
-  "isort": false,
+  "bumpversion": "n",
+  "isort": "n",
 
-  "sphinx": false,
+  "sphinx": "n",
 
-  "test": true,
-  "travis": false,
-  "coveralls": false,
-  "build": true
+  "test": "n",
+  "travis": "n",
+  "coveralls": "n",
+  "build": "y"
 
 }

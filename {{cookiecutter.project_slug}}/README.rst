@@ -11,15 +11,15 @@
         :target: https://{{ cookiecutter.project_slug | replace("_", "-") }}.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 {%- endif %}
-{% if cookiecutter.travis %}
+{% if cookiecutter.travis.lower() == "y" %}
 .. image:: https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug | replace("_", "-") }}.svg?branch=<branch_name>
    :target: https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug | replace("_", "-") }}
 {%- endif %}
-{% if cookiecutter.coveralls %}
+{% if cookiecutter.coveralls.lower() == "y" %}
 .. image:: https://coveralls.io/repos/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug | replace("_", "-") }}/badge.svg
    :target: https://coveralls.io/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug | replace("_", "-") }}
 {%- endif %}
-{% if cookiecutter.black %}
+{% if cookiecutter.black.lower() == "y" %}
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
     :target: https://github.com/psf/black
 {%- endif %}

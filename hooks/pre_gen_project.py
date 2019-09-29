@@ -17,5 +17,5 @@ if not type({{ cookiecutter.line_length }}) == int:
     print('ERROR: The line length must be a number')
     sys.exit(1)
 
-if not {{ cookiecutter.test }} and {{ cookiecutter.travis }}:
+if "{{ cookiecutter.test }}" != "y" and "{{ cookiecutter.travis }}" == "y":
     print('ERROR: Cannot use continuous integration without unit tests')

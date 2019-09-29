@@ -1,4 +1,4 @@
-{% if cookiecutter.black %}
+{% if cookiecutter.black.lower() == "y" %}
 [tool.black]
 line-length = {{cookiecutter.line_length}}
 {% endif %}

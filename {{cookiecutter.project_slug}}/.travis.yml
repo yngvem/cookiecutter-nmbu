@@ -8,12 +8,12 @@ python:
 install:
 before_script:
   - pip install tox-travis
-{% if cookiecutter.coveralls -%}
+{% if cookiecutter.coveralls.lower() == "y" -%}
   - pip install coveralls
 {%- endif -%}
 # command to run tests
 script: tox
-{% if cookiecutter.coveralls -%}
+{% if cookiecutter.coveralls.lower() == "y" -%}
 after_success: coveralls
 {%- endif -%}
 

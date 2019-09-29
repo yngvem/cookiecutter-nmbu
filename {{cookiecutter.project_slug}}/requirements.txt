@@ -1,22 +1,22 @@
 pip
-{% if cookiecutter.build %}
+{% if cookiecutter.build.lower() == "y" %}
 wheel
 twine
 {%- endif %}
 
 {% if cookiecutter.flake8 %}flake8{% endif %}
-{% if cookiecutter.black %}black{% endif %}
-{% if cookiecutter.isort -%}
+{% if cookiecutter.black.lower() == "y" %}black{% endif %}
+{% if cookiecutter.isort.lower() == "y" -%}
 isort
 seed-isort-config
 {%- endif %}
-{% if cookiecutter.bumpversion %}bumpversion{% endif %}
+{% if cookiecutter.bumpversion.lower() == "y" %}bumpversion{% endif %}
 
-{% if cookiecutter.sphinx -%}
+{% if cookiecutter.sphinx.lower() == "y" -%}
 sphinx
 {%- endif %}
 
-{% if cookiecutter.test -%}
+{% if cookiecutter.test.lower() == "y" -%}
 tox
 coverage
 pytest
